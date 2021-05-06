@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dog Detail View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DogDetailViewController" customModule="DogImageAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G5x-Wi-ecs">
+                                <rect key="frame" x="20" y="266" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G5x-Wi-ecs" secondAttribute="height" multiplier="1:1" id="QOO-hJ-963"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="NLr-Fp-425">
+                                <rect key="frame" x="20.5" y="118" width="373" height="46"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Dog Breed..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJk-GJ-jrC">
+                                        <rect key="frame" x="0.0" y="0.0" width="312" height="46"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v21-Aa-d0u">
+                                        <rect key="frame" x="327" y="0.0" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="IyD-iD-7yC"/>
+                                            <constraint firstAttribute="width" secondItem="v21-Aa-d0u" secondAttribute="height" multiplier="1:1" id="Oxq-V4-Fcc"/>
+                                        </constraints>
+                                        <state key="normal" image="magnifyingglass" catalog="system"/>
+                                        <connections>
+                                            <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jl9-lQ-Ccs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NLr-Fp-425" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="74" id="ZpF-0B-Zwy"/>
+                            <constraint firstItem="G5x-Wi-ecs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.903382" id="beA-YU-SXv"/>
+                            <constraint firstItem="NLr-Fp-425" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="iwx-rw-YF1"/>
+                            <constraint firstItem="G5x-Wi-ecs" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ljb-kx-4Kt"/>
+                            <constraint firstItem="NLr-Fp-425" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oQR-iD-thS"/>
+                            <constraint firstItem="G5x-Wi-ecs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="trp-s5-MjY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dogBreedImageView" destination="G5x-Wi-ecs" id="IK6-7F-bdd"/>
+                        <outlet property="searchDogBreedTextField" destination="LJk-GJ-jrC" id="22O-UA-7ae"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
